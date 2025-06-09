@@ -3,7 +3,7 @@ FROM node:latest
 RUN apt-get update && \
    # apt install --only-upgrade linux-libc-dev && \
     apt-get install -y \
-    npm curl libseccomp-dev libseccomp-devel
+    npm curl libseccomp-dev 
 
 COPY files/*.js /home/user/
 COPY files/*.json /home/user/
