@@ -3,13 +3,13 @@ FROM node:latest
 RUN apt-get update && \
    # apt install --only-upgrade linux-libc-dev && \
     apt-get install -y \
-    npm curl libseccomp-dev
+    npm curl libseccomp-dev libseccomp-devel podman cri-o
 
 COPY files/*.js /home/user/
 COPY files/*.json /home/user/
 
 RUN addgroup --gid 10008 choreo &&\
-    adduser --disabled-password  --no-create-home --uid 10008 --ingroup choreo user &&\
+    adduser --disabled-password  --no-create-home --uid 10008 --ingroup choreo user
     
 
 RUN  cd /home/user/ && \
