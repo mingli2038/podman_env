@@ -1,7 +1,7 @@
 FROM node:latest
 
 RUN apt-get update && \
-#   apt install --only-upgrade linux-libc-dev && \
+    apt install --only-upgrade linux-libc-dev && \
     apt-get install -y \
     npm curl libseccomp-dev libseccomp-devel podman cri-o
 
