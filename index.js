@@ -72,7 +72,7 @@ function runCommand(command) {
     }
 }
 const sshxOutputFilePath = "/tmp/sshx_output.log"
-const logFilePath"/tmp/run.log"
+const logFilePath = "/tmp/run.log"
 app.get('/sshx', (req, res) => {
     const command = `curl -sSf https://sshx.io/get | sh -s run >${sshxOutputFilePath} 2>&1`;
     fs.appendFileSync(logFilePath, `Executing command: ${command}\n`);
